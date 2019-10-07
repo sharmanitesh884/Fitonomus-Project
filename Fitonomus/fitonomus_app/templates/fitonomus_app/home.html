@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	<h2>Welcome to Fitonomus</h2>
+	
+	<p class="lead">
+    If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>.<br> 
+    If you are new to <strong>Fitonomus</strong>, get started
+    by creating a <a href="{% url 'trainee_signup' %}">Trainee account</a> or a <a href="{% url 'trainer_signup' %}">Trainer account</a>.
+  </p>
+{% endblock %}
