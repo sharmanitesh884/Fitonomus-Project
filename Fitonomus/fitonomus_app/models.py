@@ -8,7 +8,13 @@ class User(AbstractUser):
 	is_trainee = models.BooleanField(default=False)
 
 class Trainee(models.Model):
-	user = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
+	trainee = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
 
 	def __str__(self):
-		return self.user.username
+		return self.trainee.username
+
+class Trainer(models.Model):
+	trainer = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
+
+	def __str__(self):
+		return self.trainer.username
