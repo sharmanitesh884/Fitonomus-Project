@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 from django.forms.utils import ValidationError
-from fitonomus_app.models import User,Trainee
+from fitonomus_app.models import User,Trainee,Trainer
 
 class TrainerSignUpForm(UserCreationForm):
 	class Meta(UserCreationForm):
