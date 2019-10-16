@@ -28,5 +28,5 @@ class TraineeSignUpForm(UserCreationForm):
 		user = super().save(commit=False)
 		user.is_trainee = True
 		user.save()
-		trainee = Trainee.objects.create(user=user)
+		trainee = Trainee.objects.create(trainee=user)
 		return user
